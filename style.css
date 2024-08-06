@@ -1,0 +1,209 @@
+body {
+    /* background-image: url('https://images.unsplash.com/photo-1504177847824-d075f5706770?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGdhbWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60'); */
+    background-image: url(backgroundBild.avif);
+    background-color: #185adb;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+body::before,
+body::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 5;
+    background-color: rgba(148, 33, 148, 0.5);
+    opacity: 0.5;
+}
+
+body::before {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 30%;
+    animation: moveBall1 3s infinite alternate;
+}
+
+body::after {
+    width: 150px;
+    height: 150px;
+    top: 7%;
+    left: 50%;
+    animation: moveBall2 5s infinite alternate;
+}
+
+@keyframes moveBall1 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+@keyframes moveBall2 {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-50px, -50px); }
+}
+
+
+#container {
+    
+    background-color: rgba(244, 148, 243, 0.7);
+    
+    margin-top: 80px;
+    width: 30%;
+    padding: 20px;
+    border: 3px solid #fff;
+    z-index: 9999; 
+    position: relative;
+    border: none;
+}
+h3 {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 20px;
+    color: rgba(70, 43, 69);
+}
+
+#guess {
+    padding: 10px;
+    width: 40%;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 15px;
+    border: none;
+    color:  rgba(148, 33, 148, 0.5);
+    font-weight: bold;
+}
+
+
+
+#guess::placeholder {
+    font-weight: bold;
+}
+
+#btn {
+    
+    /* background-color: rgba(64, 23, 63, 0.7); */
+    background-color: rgb(247, 194, 246);
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    /* color: rgb(247, 194, 246); */
+    color: rgba(64, 23, 63, 0.7);
+    font-weight: bold;
+}
+
+/* _____ */
+.custom-swal-popup {
+    margin-top: 25%;
+    font-size: 15px; /* Укажите желаемый размер шрифта */
+}
+
+.custom-swal-title {
+    font-size: 15px; /* Размер шрифта для заголовка */
+}
+
+.custom-swal-content {
+    font-size: 12px; /* Размер шрифта для контента */
+}
+
+@media all and (max-width: 1200px) {
+    #container {
+        width: 35%;
+    }
+    h3 {
+        font-size: 17px;
+        
+    }
+}
+
+@media all and (max-width: 980px) {
+    #container {
+        width: 40%;
+    }
+    h3 {
+        font-size: 16px;
+        
+    }
+}
+
+@media all and (max-width: 860px) {
+    #container {
+        width: 50%;
+    }
+    h3 {
+        font-size: 16px;
+        
+    }
+    .custom-swal-popup {
+        margin-top: 33%;
+        font-size: 14px; /* Укажите желаемый размер шрифта */
+    }
+    
+    .custom-swal-title {
+        font-size: 14px; /* Размер шрифта для заголовка */
+    }
+    
+    .custom-swal-content {
+        font-size: 13px; /* Размер шрифта для контента */
+    }
+}
+
+@media all and (max-width: 690px) {
+    #container {
+        width: 72%;
+    }
+    h3 {
+        font-size: 14px;
+        
+    }
+    #btn {
+        
+        font-size: 10px;
+        padding: 10px;
+        
+    }
+    #guess {
+        padding: 10px;
+        width: 40%;
+        
+        font-size: 12px;
+        
+    }
+    .custom-swal-popup {
+        margin-top: 65%;
+        font-size: 13px; /* Укажите желаемый размер шрифта */
+    }
+    
+    .custom-swal-title {
+        font-size: 13px; /* Размер шрифта для заголовка */
+    }
+    
+    .custom-swal-content {
+        font-size: 12px; /* Размер шрифта для контента */
+    }
+}
+
+@media all and (max-width: 560px) {
+    #container {
+        width: 70%;
+    }
+    h3 {
+        font-size: 12px;
+        
+    }
+    #guess {
+        padding: 10px;
+        width: 46%;
+        
+        font-size: 12px;
+        
+    }
+}
